@@ -401,9 +401,7 @@ img {
     margin: auto;
     margin-top: 2em;    
 }
-.two-col .item .item-pic{
-    /* padding: 0 .5em; */
-}
+
 .two-col .item .item-txt h2{
     margin-top: 2em;
 }
@@ -411,6 +409,8 @@ img {
 
 
 .aboutus{
+    width: 94%;
+    margin: auto;
     margin-top: 4em;
 }
 .aboutus .title{
@@ -436,22 +436,95 @@ img {
     width: 94%; 
     text-align: center;
     font-size: 1.5em;  
-    margin: 3em auto 2em auto;
+    margin: 2em auto 2em auto;
    
 }
 .member h2{
     margin-bottom: 1em;
 }
 
+.contact-us{
+    margin-bottom: 4em;
+    padding: 10px;
+}
+.contact-us .member-card .txt{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+}
+
+.contact-us .member-card .txt a{
+    color: #000;
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    
+}
+.contact-us .member-card .txt > a{
+    margin-top: -1em;
+}
+.contact-us .member-card .txt a + a{
+    margin-top: .5em;
+
+}
+.contact-us .member-card .txt address{
+    margin-top: .5em;
+
+}
+.contact-us .member-card .txt i:before{
+    margin-right: 0.3em;
+    font-size: 1.4em;
+    vertical-align: middle;
+    min-width: 80;
+}
 
 
+footer{
+    background: #F5F5F5;
+}
+footer .footer-item{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+}
+.footer-icon{
+    display: flex;
+    justify-content: space-evenly;
+    /* padding: 20px; */
+    font-size: 1.4em;
+    min-width: 80px;
+}
+
+.footer-icon i{
+    align-items: center;
+}
+.footers{
+    display: flex;
+    padding: 20px;
+    font-size: .7em;
+}
+.footers .item + .item::before{
+    content: '|';
+    margin: 0 .3em ;
+}
 
 
+.copyright{
+    padding: 20px;  
+    font-size: 0.7em;
+}
+.footer-item .footers{
+    display: none;
+}
 
 
 @media screen and (min-width:768px){
     .news{
         margin-top: 1em;
+    }
+    .aboutus{
+        width: 80%
     }
     .container .news:nth-child(n+2){
         margin-top: 1.5em;
@@ -518,6 +591,13 @@ img {
         width: 30%;
         margin: 0;
     }
+    .aboutus{
+        width: 60%
+    }
+    .contact{
+        width: 100%;
+        max-width: none;
+    }
     .container .news:nth-child(n+2){
         margin-top: 0;
     }
@@ -528,10 +608,73 @@ img {
     .club-member .member-card .news{
         width: 40%;
     }
+    .contact-us .member-card .txt{
+        display: flex;
+        flex-direction: row;
+        align-items:start;
+        justify-content: space-evenly;
+        margin-bottom: 1em;
+        text-align: center;
+        padding: 1.5em;
+    }
+    .contact-us .member-card .txt > a{
+        margin-top: 0;
+    }
+    .contact-us .member-card .txt a + a{
+        margin-top: 0;
+    
+    }
+    .contact-us .member-card .txt address{
+        margin-top: 0;
+    
+    }
+    #two{
+        order: 2;
+    }
+    #three{
+        order: 3;
+    }
+
+    .contact-us .member-card .txt i:before{
+        font-size: 1.6em;
+    }
+
+
+
+    footer > div{
+        max-width: 70%;
+        margin: auto;
+    }
+    .footer-item .footers{
+        display: flex   ;
+    }
+    .footers{
+        display: none;
+    }
+    footer .footer-item > .item{
+        font-size: 1.1em;
+     }
+    .footers{
+        font-size: .9em;
+    }
+    .footers .item + .item::before{
+        margin: 0 .5em ;
+    }
+    .copyright{
+        padding: 0 0 20px 20px;
+        font-size: .9em;
+    }
+    .footer-icon{
+        font-size: 1.6em;
+        min-width: 80px;
+    }
 }
 @media screen and (min-width:1200px){
     .news-group{
         width: 72%;
+    }
+    .aboutus{
+        width: 68%
     }
     .club-member .member-card .news-group{
         flex-wrap: nowrap;
@@ -548,6 +691,30 @@ img {
     .container .news:nth-child(n+2){
         margin-top: 0;
     }
+    .contact-us .member-card .txt{
+        font-size: 1.2em;
+    }
+    .contact-us .member-card .txt i:before{
+        font-size: 1.8em;
+    }
+    footer .footer-item > .item{
+        font-size: 1.5em;
+     }
+     .footers{
+         font-size: 1.2em;
+     }
+     .footers .item + .item::before{
+         margin: 0 .5em ;
+     }
+     .copyright{
+         padding: 0 0 20px 20px;
+         font-size: 1.1em;
+     }
+     .footer-icon{
+        font-size: 1.7em;
+        min-width: 100px;
+    }
+   
 }
 @media screen and (min-width:1700px){
     .community-vision .txt{
@@ -556,5 +723,9 @@ img {
     }
     .member p{
         text-align: center;
+    }
+    .footer-icon{
+        font-size: 1.7em;
+        min-width: 140px;
     }
 }
