@@ -16,6 +16,8 @@
 
     <!-- box icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="confetti-js/dist/index.min.js"></script>
 </head>
 
 <body>
@@ -35,12 +37,11 @@
         </label>
 
         <nav class="main-nav">
-            <a href="#">首頁</a>
-            <a href="#">消息公告</a>
-            <a href="#">社團幹部</a>
-            <a href="#">社團照片</a>
-            <a href="#">聯絡我們</a>
-            <a href="#">相關資料</a>
+            <a class="click" href="#news">消息公告</a>
+            <a class="click" href="#member">社團幹部</a>
+            <a class="click" href="#picture">社團照片</a>
+            <a class="click" href="#contactus">聯絡我們</a>
+            <a class="click" href="#">相關資料</a>
         </nav>
     </header>
 
@@ -49,50 +50,50 @@
             <div class="txt">
                 <h1 class="animate__animated animate__fadeIn  animate__delay-1s">永續發展 淨零碳排</h1>
                 <p class="animate__animated animate__fadeIn  animate__delay-2s">智慧型載具社引領你朝向ESG節能車邁進</p>
-                <a href="#" class="animate__animated animate__fadeIn animate__delay-3s">開始閱覽</a>
+                <a id="getstart" href="#news" class="animate__animated animate__fadeIn animate__delay-3s" onclick="Confetti()">開始閱覽</a>
             </div>
         </div>
         <div class="banner animate__animated animate__fadeIn animate__delay-4s">
-           
+
             <div class="pic">
-                    <div class="owl-carousel owl-theme banner-carousel">
-                    <div class="slider-pic" >
-                    <picture>
-                        <source srcset="https://picsum.photos/1200/800/?random=1" media="(max-width:992px)">
-                        <img src="https://picsum.photos/1600/600/?random=4">
-                    </picture>
-                    
-                    <p></p>
+                <div class="owl-carousel owl-theme banner-carousel">
+                    <div class="slider-pic">
+                        <picture>
+                            <source srcset="https://picsum.photos/1200/800/?random=1" media="(max-width:992px)">
+                            <img src="https://picsum.photos/1600/600/?random=4">
+                        </picture>
+
+                        <p></p>
                     </div>
                     <div class="slider-pic">
                         <picture>
                             <source srcset="https://picsum.photos/1200/800/?random=2" media="(max-width:992px)">
                             <img src="https://picsum.photos/1600/600/?random=5">
                         </picture>
-                        
+
                     </div>
                     <div class="slider-pic">
                         <picture>
                             <source srcset="https://picsum.photos/1200/800/?random=3" media="(max-width:992px)">
                             <img src="https://picsum.photos/1600/600/?random=6">
                         </picture>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
         </div>
 
-
-        <section class="news-card animate__animated animate__fadeIn animate__delay-5s">
+        <canvas id="my-canvas"></canvas>
+        <section id="news" class="news-card animate__animated animate__fadeIn animate__delay-5s">
             <div class="title">
                 <h1>最新消息</h1>
             </div>
             <div class="news-group">
                 <div class="news">
-            
+
                     <div class="pic">
-                        
+
                     </div>
                     <div class="grow">
                         <div class="title">
@@ -101,14 +102,15 @@
                         <div class="txt">
                             <h3>
                                 社團郵局開戶公告</h3>
-                            <p>社團專用帳戶郵局(700)已開戶，於2023/11/21下午申請通過，帳號為00418600056100，戶名為義守大學智慧型載具研究社，目前帳戶餘額新台幣100元整，特此公告。</p>
+                            <p>社團專用帳戶郵局(700)已開戶，於2023/11/21下午申請通過，帳號為00418600056100，戶名為義守大學智慧型載具研究社，目前帳戶餘額新台幣100元整，特此公告。
+                            </p>
                         </div>
                     </div>
                     <div class="publish">
                         <div class="introduction">
                             <img src="img/news.webp" alt="">
                         </div>
-            
+
                         <div class="name">
                             <p>社長 (廖宥富)</p>
                             <p>2023/11/21</p>
@@ -117,9 +119,9 @@
                     </div>
                 </div>
                 <div class="news">
-            
+
                     <div class="pic">
-                        
+
                     </div>
                     <div class="grow">
                         <div class="title">
@@ -127,14 +129,15 @@
                         </div>
                         <div class="txt">
                             <h3>節能車SAE比賽討論時間</h3>
-                            <p>每周五567節，於工學院(02313)有電動車輛課程，課程同時會導入節能車比賽相關資訊報告，有興趣的同學歡迎旁聽參與<a href="https://www.sae-taipei.org.tw/Frontend/WebPage/JoinUS.aspx">SAE官網網站</a></p>
+                            <p>每周五567節，於工學院(02313)有電動車輛課程，課程同時會導入節能車比賽相關資訊報告，有興趣的同學歡迎旁聽參與<a
+                                    href="https://www.sae-taipei.org.tw/Frontend/WebPage/JoinUS.aspx">SAE官網網站</a></p>
                         </div>
                     </div>
                     <div class="publish">
                         <div class="introduction">
                             <img src="img/news.webp" alt="">
                         </div>
-            
+
                         <div class="name">
                             <p>社長 (廖宥富)</p>
                             <p>2023/11/19</p>
@@ -143,9 +146,9 @@
                     </div>
                 </div>
                 <div class="news">
-            
+
                     <div class="pic">
-                        
+
                     </div>
                     <div class="grow">
                         <div class="title">
@@ -153,14 +156,15 @@
                         </div>
                         <div class="txt">
                             <h3>社團期初會議</h3>
-                            <p>每2023/10/26 中午12：00舉辦社團期初會議，有參加之成員皆提供一個便當，報名<a href="https://forms.gle/mMJRaDzkfiFrLJyq7">網址</a></p>
+                            <p>每2023/10/26 中午12：00舉辦社團期初會議，有參加之成員皆提供一個便當，報名<a
+                                    href="https://forms.gle/mMJRaDzkfiFrLJyq7">網址</a></p>
                         </div>
                     </div>
                     <div class="publish">
                         <div class="introduction">
                             <img src="img/news.webp" alt="">
                         </div>
-            
+
                         <div class="name">
                             <p>社長 (廖宥富)</p>
                             <p>2023/10/23</p>
@@ -168,7 +172,7 @@
                         <div class="grow"></div>
                     </div>
                 </div>
-               
+
             </div>
         </section>
 
@@ -205,23 +209,23 @@
                                 <p>突破框架-跨域閱讀與培養競爭力
                                     希望透過彙整完整的跨領域學習觀念、準備與方法，讓想開始勇敢跨領域行動的人們，能有一個清晰的指南與著力點</p>
                             </div>
-                             
+
                             <div>
                                 <h2>開發智慧化載具</h2>
-                                    <p>解決人力不足，同時提高生產效率
-                                        設備智慧化可以為企業和個人帶來多方面的好處，包括提高效率、降低成本、增強安全性。</p>
+                                <p>解決人力不足，同時提高生產效率
+                                    設備智慧化可以為企業和個人帶來多方面的好處，包括提高效率、降低成本、增強安全性。</p>
                             </div>
                             <div class="grow"></div>
                         </div>
                         <div class="grow"></div>
                     </div>
-                  
+
                 </div>
             </div>
         </section>
 
 
-        <section class="club-member">
+        <section class="club-member" id="member">
             <div class="title member">
                 <h2>社團幹部</h2>
             </div>
@@ -229,12 +233,12 @@
                 <section class="news-card">
                     <div class="news-group">
                         <div class="news">
-                    
+
                             <div class="pic">
                                 <img src="img/img_1.webp">
                             </div>
                             <div class="grow">
-                               
+
                                 <div class="txt">
                                     <h3>
                                         廖宥富 (Jackson)</h3>
@@ -242,52 +246,52 @@
                                     <p></p>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="news">
-                    
+
                             <div class="pic">
                                 <img src="img/img_2.webp">
                             </div>
                             <div class="grow">
-                               
+
                                 <div class="txt">
                                     <h3>黃俊皓 (Harris)</h3>
                                     <p>副社長</p>
                                     <p></p>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="news">
-                    
+
                             <div class="pic">
                                 <img src="img/img_3.webp">
                             </div>
                             <div class="grow">
-                                
+
                                 <div class="txt">
                                     <h3>徐偉翔 (Weixiang)</h3>
                                     <p>公關</p>
                                     <p></p>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="news">
-                    
+
                             <div class="pic">
                                 <img src="img/img_4.webp">
                             </div>
                             <div class="grow">
-                                
+
                                 <div class="txt">
                                     <h3>陳建霖 (James)</h3>
                                     <p>社團指導教授</p>
                                     <p><a href=""></p></a>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </section>
@@ -301,29 +305,29 @@
 
 
 
-        <section class="aboutus">
+        <section class="aboutus" id="picture">
             <div class="title">
-                <h1>精彩照片</h1>
+                <h1>社團照片</h1>
             </div>
             <div class="owl-carousel owl-theme xiang-carousel">
-                <div class="slider-pic" >
-                 <img src="https://picsum.photos/300/200/?random=1">
+                <div class="slider-pic">
+                    <img src="https://picsum.photos/300/200/?random=1">
                 </div>
                 <div class="slider-pic">
-                 <img src="https://picsum.photos/300/200/?random=2">
+                    <img src="https://picsum.photos/300/200/?random=2">
                 </div>
                 <div class="slider-pic">
-                 <img src="https://picsum.photos/300/200/?random=3">
+                    <img src="https://picsum.photos/300/200/?random=3">
                 </div>
                 <div class="slider-pic">
-                 <img src="https://picsum.photos/300/200/?random=4">
+                    <img src="https://picsum.photos/300/200/?random=4">
                 </div>
-            
-             </div>
-        </section>
-          
 
-        <section class="contact-us">
+            </div>
+        </section>
+
+
+        <section class="contact-us" id="contactus">
             <div class="title member">
                 <h2>聯絡我們</h2>
             </div>
@@ -331,27 +335,27 @@
                 <section class="news-card">
                     <div class="news-group ">
                         <div class="news contact">
-                    
+
                             <div class="pic">
-                                
+
                             </div>
                             <div class="grow">
-                               
+
                                 <div class="txt">
                                     <a href="https://www.instagram.com/svrc.isu/">
-                                        <i class='bx bxl-instagram-alt' >svrc.isu</i>
+                                        <i class='bx bxl-instagram-alt'>svrc.isu</i>
                                     </a>
                                     <a id="three" href="https://www.youtube.com/channel/UCm_qAYh9uefEiByy0BdxDzg">
                                         <i class='bx bxl-youtube'>svrc.isumae</i>
                                     </a>
                                     <address id="two">
                                         <a href="mailto:isusmartmotorvehicle@gmail.com">
-                                        <i class='bx bxs-envelope' >isusmartmotorvehicle@gmail.com</i>
-                                    </a>
+                                            <i class='bx bxs-envelope'>isusmartmotorvehicle@gmail.com</i>
+                                        </a>
                                     </address>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </section>
@@ -365,16 +369,16 @@
             <div class="footer-item">
                 <div class="item"><a href="index.html">智慧型載具研究社</a></div>
                 <div class="footers">
-                    <div class="item"><a href="#">消息公告</a></div>
-                    <div class="item"><a href="#">社團幹部</a></div>
-                    <div class="item"><a href="#">社團照片</a></div>
-                    <div class="item"><a href="#">聯絡我們</a></div>
+                    <div class="item"><a href="#news">消息公告</a></div>
+                    <div class="item"><a href="#member">社團幹部</a></div>
+                    <div class="item"><a href="#picture">社團照片</a></div>
+                    <div class="item"><a href="#contactus">聯絡我們</a></div>
                     <div class="item"><a href="#">相關資料</a></div>
                 </div>
                 <div class="footer-icon">
                     <div class="item"><a href="https://www.instagram.com/svrc.isu/">
-                        <i class='bx bxl-instagram-alt' ></i>
-                    </a></div>
+                            <i class='bx bxl-instagram-alt'></i>
+                        </a></div>
                     <div class="item">
                         <a href="https://www.youtube.com/channel/UCm_qAYh9uefEiByy0BdxDzg">
                             <i class='bx bxl-youtube'></i>
@@ -383,19 +387,19 @@
                     <div class="item">
                         <address>
                             <a href="mailto:isusmartmotorvehicle@gmail.com">
-                            <i class='bx bxs-envelope' ></i>
-                        </a>
+                                <i class='bx bxs-envelope'></i>
+                            </a>
                         </address>
-                        
+
                     </div>
                 </div>
             </div>
-            
+
             <div class="footers">
-                <div class="item"><a href="#">消息公告</a></div>
-                <div class="item"><a href="#">社團幹部</a></div>
-                <div class="item"><a href="#">社團照片</a></div>
-                <div class="item"><a href="#">聯絡我們</a></div>
+                <div class="item"><a href="#news">消息公告</a></div>
+                <div class="item"><a href="#member">社團幹部</a></div>
+                <div class="item"><a href="#picture">社團照片</a></div>
+                <div class="item"><a href="#contactus">聯絡我們</a></div>
                 <div class="item"><a href="#">相關資料</a></div>
             </div>
             <div class="copyright">Copyright © 2023 Xiang. All rights reserved.</div>
@@ -415,69 +419,72 @@
 
 
 
-    
+
     <script src="jquery_3.7.1_jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script>$(document).ready(function(){
-        $(".banner-carousel").owlCarousel({
-            loop:true,
-            margin:10,
-            responsiveClass:true,
-            center:true, // 欄位需偶數
-            startPosition: 'URLHash',
-            nav:true,
-            autoplay:true,
-            autoplayTimeout: 7000,
-            autoHeight:true,
-            animateOut: 'fadeOut',
+    <script>$(document).ready(function () {
+            $(".banner-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                center: true, // 欄位需偶數
+                startPosition: 'URLHash',
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 7000,
+                autoHeight: true,
+                animateOut: 'fadeOut',
 
-            responsive:{
-                0:{            
-                    items:1,
-                    // nav:true //左右箭頭
+                responsive: {
+                    0: {
+                        items: 1,
+                        // nav:true //左右箭頭
+                    }
+                    // 768:{
+                    //     items:1,
+                    //     // nav:true
+                    // },
+                    // 1024:{
+                    //     items:3,
+                    //     nav:true,
+                    //     loop:true
+                    // }
                 }
-                // 768:{
-                //     items:1,
-                //     // nav:true
-                // },
-                // 1024:{
-                //     items:3,
-                //     nav:true,
-                //     loop:true
-                // }
-            }
-        });
-    });</script>
+            });
+        });</script>
 
-    <script>$(document).ready(function(){
-        $(".xiang-carousel").owlCarousel({
-            loop:true,
-            margin:10,
-            responsiveClass:true,
-            center:false, // 欄位需偶數
-            startPosition: 'URLHash',
-            nav:true,
-            autoplay:true,
-            autoplayTimeout: 5000,
+    <script>$(document).ready(function () {
+            $(".xiang-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                center: false, // 欄位需偶數
+                startPosition: 'URLHash',
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
 
-            responsive:{
-                0:{            
-                    items:1,
-                    // nav:true //左右箭頭
-                },
-                768:{
-                    items:2,
-                    // nav:true
-                },
-                1024:{
-                    items:2,
-                },
-                1200:{
-                    items:3,
-                },
-            }
-        });
-    });</script>
+                responsive: {
+                    0: {
+                        items: 1,
+                        // nav:true //左右箭頭
+                    },
+                    768: {
+                        items: 2,
+                        // nav:true
+                    },
+                    1024: {
+                        items: 2,
+                    },
+                    1200: {
+                        items: 3,
+                    },
+                }
+            });
+        });</script>
+
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
