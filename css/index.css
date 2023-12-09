@@ -236,7 +236,9 @@ html{
     z-index: 2;  
     position: relative;
 }
-
+.xiang-carousel .slider-pic img{
+    aspect-ratio: 4/4;
+}
 /* -----------------------owl-----------------------*/
 
 .banner-txt{
@@ -426,6 +428,9 @@ html{
 .two-col .item .item-txt p{
     line-height: 1.8em;
     margin-top: 0.5 em;
+}
+.two-col .item-pic img{
+    aspect-ratio: 5/4;
 }
 
 
