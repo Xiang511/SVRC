@@ -1,10 +1,11 @@
-
 #pagination-container{
     width: 20%;
     margin: auto;
 }
-.page-link{
 
+#list-wrapper{
+    max-width: 1700px;
+    margin: 3em auto auto auto;
 }
 #list-wrapper .news{
     max-width: none;
@@ -44,3 +45,4 @@
         padding: 3px 3px 3px 3px;
     }
 }
+
