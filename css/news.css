@@ -6,6 +6,7 @@
 #list-wrapper{
     max-width: 1700px;
     margin: 3em auto auto auto;
+    min-height: 80vh;
 }
 #list-wrapper .news{
     max-width: none;
