@@ -75,7 +75,7 @@ html{
 
     }
 
-    .hb span {
+    /* .hb span {
         width: 80%;
         height: 2px;
         background-color: #000;
@@ -83,9 +83,46 @@ html{
         left: 0;
         right: 0;
         margin: auto;
-    }
+    } */
+    .icon {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            /* border: 1px solid rgba(0, 0, 0, 0.3); */
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
 
-    .hb span:nth-child(1) {
+        .icon i {
+            position: absolute;
+            font-size: 30px;
+            left: 50%;
+            top: 50%;
+            color: #333;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .icon.active {
+            /* background: #FF676D; */
+        }
+        .icon i.close {
+            opacity: 0;
+        }
+        .icon.active i.close {
+            opacity: 1;
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+
+        .icon.active i.open {
+            opacity: 0;
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+
+    /* .hb span:nth-child(1) {
         top: 9px;
         rotate: 0deg;
         transition: top 0.5s 0.5s, rotate 0.5s;
@@ -100,7 +137,7 @@ html{
         top: 29px;
         rotate: 0deg;
         transition: top 0.5s 0.5s, rotate 0.5s;
-    }
+    } */
 
 
 
